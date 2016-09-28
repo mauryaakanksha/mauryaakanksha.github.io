@@ -4,11 +4,16 @@
   date: "Sept 2015 - present"
   courses:
     - name: "Machine Learning"
-    - name: "Algorithm"
-  teachings:
-    - name: "Introduction to Probability and Statistics"
+    - name: "Design and Analysis of Algorithms"
+    - name: "Probabilistic Reasoning and Decision Making"
+    - name: "Distributed Systems"
     - name: "Embedded Computing"
-    - name: "Components and Design Techniques for Digital Systems"
+    - name: "Internet of Things"
+    - name: "Computer Architecture"
+  teachings:
+    - name: "Probability and Statistics"
+    - name: "Embedded Computing"
+    - name: "Digital Design"
 
 - name: 'Indian Institute of Technology, Kharagpur'
   img: 'static/img/landing/IITKgp.png'
@@ -16,4 +21,11 @@
   date: "Jul 2008 - May 2012"
   courses:
     - name: "Programming and Data Structure"
+    - name: "Embedded Systems"
     - name: "Operatng Systems"
+    - name: "Computer Architecture"
+    - name: "Artificial Intelligence"
+    - name: "Database Management Systems"
+    - name: "Signals and Networks"
+    - name: "Data Communication and Networks"
+    - name: "Digital Image/Signal Processing"

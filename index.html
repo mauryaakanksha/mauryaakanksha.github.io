@@ -167,16 +167,21 @@ permalink: /
                       <h2>{{ edu.name }}</h2>
                       <h2>{{ edu.desc }}</h2>
                       <p>{{ edu.date }}</p>
-                      <h2>Course Work</h2>
-                      {% for course in edu.courses %}
-                        <p>{{ course.name }}</p>
-                      {% endfor %}
-                      {% if edu.name == "University of California, San Diego" %}
-                        <h2>Teaching Assistant</h2>
-                        {% for ta in edu.teachings %}
-                            <p>{{ ta.name }}</p>
+                      <br>
+                      <div {% if edu.name == "University of California, San Diego"%} class="col-sm-6" {% endif %}>
+                        <h2>Course Work</h2>
+                        {% for course in edu.courses %}
+                            <li>{{ course.name }}</li>
                         {% endfor %}
-                      {% endif %}
+                      </div>
+                      <div class="col-sm-6">
+                        {% if edu.name == "University of California, San Diego" %}
+                            <h2>Teaching Assistant</h2>
+                            {% for ta in edu.teachings %}
+                                <li>{{ ta.name }}</li>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
                   </div>
               </div>
           {% endfor %}
@@ -184,7 +189,7 @@ permalink: /
     </div>
     <br>
 </section>
-<section id="research" class="research gray-section features">
+<section id="research" class="education gray-section features">
     <div class="container">
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
@@ -192,35 +197,58 @@ permalink: /
                 <h1>My Research</h1>
             </div>
         </div>
+        <div class="row">
+            {% for research in site.data.research %}                
+                {% assign loopindex = forloop.index %}
+                <div class=fadeInLeft>
+                  <div class="team-member">
+                      <img src="{{ research.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                      <br>
+                      <h2>{{ research.name }}</h2>
+                      <p>{{ research.date }}</p>
+                      <br>
+                      <p>{{ research.desc }}</p>
+                      <br>
+                      <div {% if edu.name == "University of California, San Diego"%} class="col-sm-6" {% endif %}>
+                        <h2>Publications</h2>
+                        {% for pub in research.publications %}
+                            <li>{{ pub.name }}</li>
+                        {% endfor %}
+                    </div>
+                  </div>
+              </div>
+          {% endfor %}
+        </div>
     </div>
     <br>
 </section>
-<section id="skills" class="team features">
+<section id="skills" class="skills features">
     <div class="container">
-        <div class="row">
+        <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
                 <h1>My Skills</h1>
             </div>
         </div>
-        <div class="row features-block">
-            {% for skill in site.data.skills %}
-                {% assign loopindex = forloop.index | modulo: 2 %}
-            <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
-                    <p>{{ skill.name }}</p>
-                </div>
-                <div class="col-lg-7 wow  {% if loopindex == 1 %} fadeInRight {% else %} fadeInLeft {% endif %}">
-                    <div class="progress progress-bar-default">
-                        <div style="width: {{ skill.percentage }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="{{ skill.percentage }}" role="progressbar" class="progress-bar">
+      
+            {% for skill in site.data.skills %}                
+                <div class="row fadeInLeft">
+                  <div class="team-member">
+                      <h2>{{ skill.name }}</h2>
+                      
+                        {% for image in skill.images %}
+                        <div class="col-sm-3">
+                            <img src="{{ image.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="" style="width:50px;height:50px;">
+                            <p>{{ image.name}} </p>
                         </div>
-                    </div>
+                        {% endfor %}
+                      
+                  </div>
                 </div>
-            </div>
-            <br>
-            {% endfor %}
-        </div>
+          {% endfor %}
+
     </div>
+    <br>
 </section>
 <section id="projects" class="project gray-section features">
     <div class="container">

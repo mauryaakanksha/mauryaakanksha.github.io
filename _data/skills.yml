@@ -1,17 +1,47 @@
-- name: Python
-  percentage: 85
+- name: Programming
+  images: 
+    - img: "static/img/landing/skills/c.png"
+      name: "C"
+    - img: "static/img/landing/skills/cpp.png"
+      name: "C++"  
+    - img: "static/img/landing/skills/java.png"
+      name: "Java"
+    - img: "static/img/landing/skills/python.jpeg"
+      name: "Python" 
+    - img: "static/img/landing/skills/tcl.png"
+      name: "Tcl"
+    - img: "static/img/landing/skills/sql.png"
+      name: "SQL" 
+    - img: "static/img/landing/skills/xml.jpeg"
+      name: "XML"
+    - img: "static/img/landing/skills/xsd.jpeg"
+      name: "XSD(Schema)" 
 
-- name: HTML/CSS
-  percentage: 65
 
-- name: Linux/Shell
-  percentage: 75
 
-- name: jQuery
-  percentage: 70
-
-- name: AngularJS
-  percentage: 80
-
-- name: Ionic
-  percentage: 65
+- name: Technologies
+  images: 
+    - img: "static/img/landing/skills/visualstudio"
+      name: "Visual Studio"
+    - img: "static/img/landing/skills/sqlserver.jpeg"
+      name: "Microsoft SQL Server"  
+    - img: "static/img/landing/skills/eclipse.png"
+      name: "Eclipse"
+    - img: "static/img/landing/skills/docker.png"
+      name: "Docker" 
+    - img: "static/img/landing/skills/hadoop.jpeg"
+      name: "Hadoop"
+    - img: "static/img/landing/skills/openCV.png"
+      name: "OpenCV" 
+    - img: "static/img/landing/skills/boost.jpeg"
+      name: "Boost"
+    - img: "static/img/landing/skills/qt.jpeg"
+      name: "Qt" 
+    - img: "static/img/landing/skills/theano.png"
+      name: "Theano" 
+    - img: "static/img/landing/skills/rapidjson.png"
+      name: "RapidJson"           
+    - img: "static/img/landing/skills/jekyll.png"
+      name: "Jekyll"           
+    - img: "static/img/landing/skills/ctemplate.jpeg"
+      name: "CTemplate"                       

@@ -1,9 +1,9 @@
-- name:
-    detail: University of California San Diego
-  desc:
-    detail: Currently, I am prusing my Masters in Computer Engineering at University of California San Diego.
-  date:
-    detail: Sept 2015 - present
-  job:
-    detail: Masters in Computer Engineering
-  icon: fa-book
+- name: 'System Energy Efficiency Lab, UCSD'
+  img: 'static/img/landing/see.jpeg'
+  desc: "working on time series clustering"
+  date: "Sept 2015 - present"
+  publications:
+    - name: "Time-Series Clustering for Data Analysis in Smart Grid [IEEE International Conference on SmartGridComm 2016]"
+      href: "link"
+    - name: "Hierarchical Static Low Power Verification [DAC Designer and IP Track Poster Session June 2015]"
+      href: "link"
