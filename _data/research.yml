@@ -1,0 +1,9 @@
+- name:
+    detail: University of California San Diego
+  desc:
+    detail: Currently, I am prusing my Masters in Computer Engineering at University of California San Diego.
+  date:
+    detail: Sept 2015 - present
+  job:
+    detail: Masters in Computer Engineering
+  icon: fa-book

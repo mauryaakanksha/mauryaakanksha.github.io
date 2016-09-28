@@ -1,0 +1,30 @@
+
+- name:
+    detail: Synopsys
+  desc:
+    detail: description
+  date:
+    detail: Jun 2016 - Sept 2016
+  job:
+    detail: Software Intern
+  icon: fa-gamepad
+
+- name:
+    detail: Synopsys
+  desc:
+    detail: description
+  date:
+    detail: Jun 2012 - Aug 2015
+  job:
+    detail: Software Engineer
+  icon: fa-gamepad
+
+- name:
+    detail: IBM
+  desc:
+    detail: description
+  date:
+    detail: May 2011 - Jul 2011
+  job:
+    detail: Software Intern
+  icon: fa-gamepad

@@ -1,0 +1,20 @@
+- name: Home
+  href: page-top
+
+- name: About
+  href: about-me
+
+- name: Career
+  href: careers
+
+- name: Education
+  href: education
+
+- name: Research
+  href: research
+
+- name: Skills
+  href: skills
+
+- name: Project
+  href: projects

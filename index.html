@@ -1,23 +1,349 @@
 ---
 layout: default
+title: index
+permalink: /
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                {% for nav in site.data.navbar %}
+                    <li><a class="page-scroll" href="#{{ nav.href }}">{{ nav.name }}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image wow zoomIn">
+                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<section id="about-me" class="features">
+    <div class="container">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>About Me</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 wow fadeInLeft">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-cplusplus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-2 wow fadeInLeft">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-java-bold"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="team-member wow zoomIn">
+                    <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
+                    <h4>{{ site.author.first_name }} {{ site.author.last_name }}</h4>
+                    <ul class="list-inline social-icon">
+                        <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}" target="blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-2 wow fadeInRight">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-shell"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-2 wow fadeInRight">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-python"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg wow zoomIn">
+                <p>{{ site.author.desc }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="careers" class="timeline gray-section features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>My Career</h1>
+            </div>
+        </div>
+        <div class="row features-block">
+            <div class="col-lg-12">
+                <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
+                {% for career in site.data.careers %}
+                {% assign loopindex = forloop.index | modulo: 2 %}
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg wow rotateIn">
+                            <i class="fa {{ career.icon }}"></i>
+                        </div>
+                        <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
+                            <h2>{{ career.name.detail }}</h2>
+                            <p>{{ career.desc.detail }}</p>
+                            <span class="vertical-date">{{ career.date.detail }}
+                            <br/> <small>{{ career.job.detail }}</small> </span>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="education" class="education features">
+    <div class="container">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>My Education</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for edu in site.data.education %}                
+                {% assign loopindex = forloop.index %}
+                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
+                  <div class="team-member">
+                      <img src="{{ edu.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                      <h2>{{ edu.name }}</h2>
+                      <h2>{{ edu.desc }}</h2>
+                      <p>{{ edu.date }}</p>
+                      <h2>Course Work</h2>
+                      {% for course in edu.courses %}
+                        <p>{{ course.name }}</p>
+                      {% endfor %}
+                      {% if edu.name == "University of California, San Diego" %}
+                        <h2>Teaching Assistant</h2>
+                        {% for ta in edu.teachings %}
+                            <p>{{ ta.name }}</p>
+                        {% endfor %}
+                      {% endif %}
+                  </div>
+              </div>
+          {% endfor %}
+        </div>
+    </div>
+    <br>
+</section>
+<section id="research" class="research gray-section features">
+    <div class="container">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>My Research</h1>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+<section id="skills" class="team features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>My Skills</h1>
+            </div>
+        </div>
+        <div class="row features-block">
+            {% for skill in site.data.skills %}
+                {% assign loopindex = forloop.index | modulo: 2 %}
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-2 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
+                    <p>{{ skill.name }}</p>
+                </div>
+                <div class="col-lg-7 wow  {% if loopindex == 1 %} fadeInRight {% else %} fadeInLeft {% endif %}">
+                    <div class="progress progress-bar-default">
+                        <div style="width: {{ skill.percentage }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="{{ skill.percentage }}" role="progressbar" class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section id="projects" class="project gray-section features">
+    <div class="container">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>My Projects</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for project in site.data.projects %}
+                {% assign loopindex = forloop.index | modulo: 2 %}
+                {% if forloop.last %}
+                    {% if forloop.last == forloop.first %}
+                <div class="col-sm-6 wow col-sm-offset-3 zoomIn">
+                    {% else %}
+                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">
+                    {% endif %}
+                {% else %}
+                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
+                {% endif %}
+                  <div class="team-member">
+                      <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                      <h4><a href="{{ project.url | prepend: 'https://github.com' }}" target="blank" style="color: #1ab394" class="navy">{{ project.name }}</a></h4>
+                      <p>{{ project.desc }}</p>
+                  </div>
+              </div>
+          {% endfor %}
+        </div>
+    </div>
+    <br>
+</section>
+
+<script>
+$(document).ready(function() {
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 80
+    });
+    // Page scrolling feature
+    $('a.page-scroll').bind('click', function(event) {
+        var link = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(link.attr('href')).offset().top - 50
+        }, 500);
+        event.preventDefault();
+        $("#navbar").collapse('hide');
+    });
+});
+var cbpAnimatedHeader = (function() {
+    var docElem = document.documentElement,
+        header = document.querySelector('.navbar-default'),
+        didScroll = false,
+        changeHeaderOn = 200;
+
+    function init() {
+        window.addEventListener('scroll', function(event) {
+            if (!didScroll) {
+                didScroll = true;
+                setTimeout(scrollPage, 250);
+            }
+        }, false);
+    }
+
+    function scrollPage() {
+        var sy = scrollY();
+        if (sy >= changeHeaderOn) {
+            $(header).addClass('navbar-scroll');
+        } else {
+            $(header).removeClass('navbar-scroll');
+        }
+        didScroll = false;
+    }
+
+    function scrollY() {
+        return window.pageYOffset || docElem.scrollTop;
+    }
+    init();
+
+})();
+// Activate WOW.js plugin for animation on scrol
+new WOW().init();
+</script>
+<script>
+$(document).ready(function() {
+    $.i18n.init({
+        resGetPath: 'static/locales/__lng__.json',
+        load: 'unspecific',
+        fallbackLng: false,
+        lng: 'en'
+    }, function(t) {
+        $('.i18container').i18n();
+        $('#i18_navbar').i18n();
+        $('#i18_about_me').i18n();
+        $('#i18_skills').i18n();
+        $('#i18_projects').i18n();
+        $('#i18_career').i18n();
+        $('#i18_blog').i18n();
+        $('#i18_link').i18n();
+    });
+    $('.set_en').on('click', function() {
+        i18n.setLng('en', function() {
+            $('.i18container').i18n();
+            $('#i18_navbar').i18n();
+            $('#i18_about_me').i18n();
+            $('#i18_skills').i18n();
+            $('#i18_projects').i18n();
+            $('#i18_career').i18n();
+            $('#i18_blog').i18n();
+            $('#i18_link').i18n();
+        });
+    });
+    $('.set_cn').on('click', function() {
+        i18n.setLng('zh', function() {
+            $('.i18container').i18n();
+            $('#i18_navbar').i18n();
+            $('#i18_about_me').i18n();
+            $('#i18_skills').i18n();
+            $('#i18_projects').i18n();
+            $('#i18_career').i18n();
+            $('#i18_blog').i18n();
+            $('#i18_link').i18n();
+        });
+    });
+});
+</script>

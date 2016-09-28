@@ -1,0 +1,19 @@
+- name: 'University of California, San Diego'
+  img: 'static/img/landing/UCSanDiego.png'
+  desc: "Masters in Computer Engineering"
+  date: "Sept 2015 - present"
+  courses:
+    - name: "Machine Learning"
+    - name: "Algorithm"
+  teachings:
+    - name: "Introduction to Probability and Statistics"
+    - name: "Embedded Computing"
+    - name: "Components and Design Techniques for Digital Systems"
+
+- name: 'Indian Institute of Technology, Kharagpur'
+  img: 'static/img/landing/IITKgp.png'
+  desc: "B.Tech in Instrumentation Engineering"
+  date: "Jul 2008 - May 2012"
+  courses:
+    - name: "Programming and Data Structure"
+    - name: "Operatng Systems"

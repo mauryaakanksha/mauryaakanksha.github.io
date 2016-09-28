@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: <https://mauryaakanksha.github.io/sitemap.xml>

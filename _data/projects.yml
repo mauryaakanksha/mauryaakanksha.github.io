@@ -1,0 +1,23 @@
+- name: 'Distributed File System'
+  url: '/mauryaakanksha/RemoteMethodInvocation'
+  img: 'static/img/landing/saplatform.png'
+  desc: 'dfs description'
+
+- name: 'Face Clustering'
+  url: '/mauryaakanksha/FaceClustering'
+  img: 'static/img/landing/jekyll.png'
+  desc: "faceclus description"
+
+- name: 'EDF Scheduler'
+  url: '/mauryaakanksha/EDFScheduler'
+  img: 'static/img/landing/angularjs.png'
+  desc: "edf description"
+
+- name: 'Branch Predictor'
+  url: '/mauryaakanksha/BranchPredictor'
+  img: 'static/img/landing/rsser.png'
+  desc: "predictor description"
+
+- name: 'Smart Home Montioring'
+  img: 'static/img/landing/rsser.png'
+  desc: "smart home description"
