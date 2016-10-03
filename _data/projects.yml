@@ -1,23 +1,23 @@
 - name: 'Distributed File System'
   url: '/mauryaakanksha/RemoteMethodInvocation'
   img: 'static/img/landing/saplatform.png'
-  desc: 'dfs description'
+  desc: 'A distributed file system with support for replication and locking using a custom Remote Method Invocation library for JVM.'
 
 - name: 'Face Clustering'
   url: '/mauryaakanksha/FaceClustering'
   img: 'static/img/landing/jekyll.png'
-  desc: "faceclus description"
+  desc: "Unsupervised Face Clustering with a Haar feature-based classifier and a stacked auto-encoder using Theano deep learning framework."
 
 - name: 'EDF Scheduler'
   url: '/mauryaakanksha/EDFScheduler'
   img: 'static/img/landing/angularjs.png'
-  desc: "edf description"
+  desc: "Energy efficient earliest deadline first scheduler with sensor interaction on Rpi2"
 
 - name: 'Branch Predictor'
   url: '/mauryaakanksha/BranchPredictor'
   img: 'static/img/landing/rsser.png'
-  desc: "predictor description"
+  desc: "Piecewise linear branch predictor using perceptron and path based neural prediction."
 
 - name: 'Smart Home Montioring'
   img: 'static/img/landing/rsser.png'
-  desc: "smart home description"
+  desc: "Smart Home Montioring System to monitor energy consumption and control multiple connected appliances with a central dashboard."

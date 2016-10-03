@@ -1,6 +1,6 @@
 - name: 'System Energy Efficiency Lab, UCSD'
   img: 'static/img/landing/see.jpeg'
-  desc: "working on time series clustering"
+  desc: "Working with Prof Tajana Rosing on machine learning algorithms for Internet of Things applications. Mainly focusing on time-series clustering and anomaly detection."
   date: "Sept 2015 - present"
   publications:
     - name: "Time-Series Clustering for Data Analysis in Smart Grid [IEEE International Conference on SmartGridComm 2016]"

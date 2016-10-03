@@ -2,7 +2,7 @@
 - name:
     detail: Synopsys
   desc:
-    detail: description
+    detail: C++ code generation based on Pimpl design pattern from a XML model. Handles serialization and forward-backward database compatibility. Generated +35K lines of C++ code from <4K lines of XML code. 
   date:
     detail: Jun 2016 - Sept 2016
   job:
@@ -12,7 +12,7 @@
 - name:
     detail: Synopsys
   desc:
-    detail: description
+    detail: Developed several static verification features in C++ for enhancement projects with key customers (Apple, Intel, Qualcomm). Implemented an algorithm to extract supply connectivity and apply rule based search for name mapping. Designed an abstract data model for hierarchical verification which reduced the run-time by ~30%. Improved the run time of supply order corruption check by ~90%. Wrote Tcl and python scripts for reporting the verification results.
   date:
     detail: Jun 2012 - Aug 2015
   job:
@@ -22,7 +22,7 @@
 - name:
     detail: IBM
   desc:
-    detail: description
+    detail: Implemented an adapter for cyber-security platform to prevent access violation.
   date:
     detail: May 2011 - Jul 2011
   job:
