@@ -1,28 +1,28 @@
 - name: 'Distributed File System'
   url: '/mauryaakanksha/RemoteMethodInvocation'
-  img: 'static/img/landing/saplatform.png'
+  img: 'static/img/landing/Project/dfs.jpeg'
   desc: 'Implemented a distributed file system with support for replication, locking and other file operations using a custom Remote Method Invocation (RMI) library for JVM.'
   skills: "Java, Docker"
 
 - name: 'Face Clustering'
   url: '/mauryaakanksha/FaceClustering'
-  img: 'static/img/landing/jekyll.png'
+  img: 'static/img/landing/Project/deeplearning.png'
   desc: "Implemented an unsupervised Face Clustering model with a Haar feature-based classifier and a stacked auto-encoder using Theano deep learning framework."
   skills: "Python, RPi2, Theano, OpenCV"
 
 - name: 'EDF Scheduler'
   url: '/mauryaakanksha/EDFScheduler'
-  img: 'static/img/landing/angularjs.png'
+  img: 'static/img/landing/Project/scheduler.png'
   desc: "implemented an Energy efficient earliest deadline first (EDF) scheduler with sensor interaction on RPi2 with performance monitoring using kernel modules."
   skills: "C, RPi2"
 
 - name: 'Branch Predictor'
   url: '/mauryaakanksha/BranchPredictor'
-  img: 'static/img/landing/rsser.png'
+  img: 'static/img/landing/Project/predictor.png'
   desc: "Implemented a piecewise linear branch predictor using perceptron and path based neural prediction."
   skills: "C"
 
 - name: 'Smart Home Montioring'
-  img: 'static/img/landing/rsser.png'
+  img: 'static/img/landing/Project/smarthome.png'
   desc: "Developed a Smart Home Montioring System to monitor energy consumption and control multiple connected appliances with a central dashboard."
   skills: "Java, Swing (GUI), NesC, Telosb, TinyOS"
