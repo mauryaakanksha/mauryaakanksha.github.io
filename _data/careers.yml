@@ -2,9 +2,11 @@
 - name:
     detail: Synopsys
   desc:
-    detail: C++ code generation based on Pimpl design pattern from a XML model. Handles serialization and forward-backward database compatibility. Generated +35K lines of C++ code from <4K lines of XML code. 
+    detail: Implemented a model driven code generator based on PImpl design pattern for C++ code from a XML model. The generated C++ code handles serialization and forward-backward compatibility of data. Generated +35K lines of C++ code from <4K lines of XML model.
+  skills:
+    detail: "C++, XML, (XSD) Schema, Ctemplate, RapidJSON, QFile"
   date:
-    detail: Jun 2016 - Sept 2016
+    detail: Jun 2016 - Septs 2016
   job:
     detail: Software Intern
   icon: fa-flash
@@ -12,7 +14,9 @@
 - name:
     detail: Synopsys
   desc:
-    detail: Developed several static verification features in C++ for enhancement projects with key customers (Apple, Intel, Qualcomm). Implemented an algorithm to extract supply connectivity and apply rule based search for name mapping. Designed an abstract data model for hierarchical verification which reduced the run-time by ~30%. Improved the run time of supply order corruption check by ~90%. Wrote Tcl and python scripts for reporting the verification results.
+    detail: Developed several static verification features in C++ for enhancement projects with key customers (Apple, Intel, Qualcomm). Resolved critical bugs in customer designs during different phases of product cycle. Implemented a cross-team project " Golden Upf Flow" and improved run-time performace for several customers. Wrote Tcl and python scripts for reporting the verification results. Recieved Individual Excellence Award for consistent preformace and showing initiatives.
+  skills:
+    detail: "C++, Tcl, Python, Verilog, Boost C++" 
   date:
     detail: Jun 2012 - Aug 2015
   job:
@@ -22,7 +26,9 @@
 - name:
     detail: IBM
   desc:
-    detail: Implemented an adapter for cyber-security platform to prevent access violation.
+    detail: Implemented an adapter for cyber-security platform to prevent access violation by using IBM Tivoli products and Modbus protocol
+  skills:
+    detail: "C, IBM Tivoli, Netcool Omnibus, Modbus"
   date:
     detail: May 2011 - Jul 2011
   job:

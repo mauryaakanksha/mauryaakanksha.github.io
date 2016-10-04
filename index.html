@@ -140,6 +140,7 @@ permalink: /
                         <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
                             <h2>{{ career.name.detail }}</h2>
                             <p>{{ career.desc.detail }}</p>
+                            <p><i>{{career.skills.detail}}</i></p>
                             <span class="vertical-date">{{ career.date.detail }}
                             <br/> <small>{{ career.job.detail }}</small> </span>
                         </div>
@@ -168,20 +169,29 @@ permalink: /
                       <h2>{{ edu.desc }}</h2>
                       <p>{{ edu.date }}</p>
                       <br>
-                      <div {% if edu.name == "University of California, San Diego"%} class="col-sm-6" {% endif %}>
-                        <h2>Course Work</h2>
-                        {% for course in edu.courses %}
-                            <li>{{ course.name }}</li>
-                        {% endfor %}
-                      </div>
-                      <div class="col-sm-6">
-                        {% if edu.name == "University of California, San Diego" %}
-                            <h2>Teaching Assistant</h2>
-                            {% for ta in edu.teachings %}
-                                <li>{{ ta.name }}</li>
+                      {% if edu.name =="University of California, San Diego" %}
+                        <div class="col-sm-6" align= "left">
+                            <h2> Course Work</h2>
+                            {% for course in edu.courses %}
+                                <li> {{course.name}}</li>
                             {% endfor %}
-                        {% endif %}
-                    </div>
+                        </div>
+                        <div class="col-sm-6" align = "left">    
+                            <h2> Teaching Work</h2>
+                            {% for ta in edu.teachings %}
+                                <li> {{ta.name}}</li>
+                            {% endfor %}
+                        </div>
+                      {% else %}
+                        <div class="col-md-4" align= "left">
+                        </div>
+                        <div class="col-sm-6" align ="left">
+                            <h2> Course Work</h2>
+                            {% for course in edu.courses %}
+                                <li> {{course.name}}</li>
+                            {% endfor %}
+                        </div>                         
+                      {% endif %}
                   </div>
               </div>
           {% endfor %}
@@ -209,12 +219,14 @@ permalink: /
                       <br>
                       <p>{{ research.desc }}</p>
                       <br>
-                      <div {% if edu.name == "University of California, San Diego"%} class="col-sm-6" {% endif %}>
-                        <h2>Publications</h2>
+                      <h2>Publications</h2>
+                      <div class= "col-sm-3">
+                      </div>
+                      <div class= "col-sm-8" align="left">
                         {% for pub in research.publications %}
-                            <li>{{ pub.name }}</li>
+                            <li><a href="{{ pub.link}}" target="blank" >{{ pub.name }}</a><i>  {{pub.conf}}</i></li>
                         {% endfor %}
-                    </div>
+                      </div>
                   </div>
               </div>
           {% endfor %}
@@ -274,6 +286,7 @@ permalink: /
                       <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
                       <h4><a href="{{ project.url | prepend: 'https://github.com' }}" target="blank" style="color: #1ab394" class="navy">{{ project.name }}</a></h4>
                       <p>{{ project.desc }}</p>
+                      <p><i>{{project.skills}}</i><p>
                   </div>
               </div>
           {% endfor %}

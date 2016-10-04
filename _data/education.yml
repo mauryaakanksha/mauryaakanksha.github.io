@@ -5,7 +5,7 @@
   courses:
     - name: "Machine Learning"
     - name: "Design and Analysis of Algorithms"
-    - name: "Probabilistic Reasoning and Decision Making"
+    - name: "Probabilistic Reasoning"
     - name: "Distributed Systems"
     - name: "Embedded Computing"
     - name: "Internet of Things"
